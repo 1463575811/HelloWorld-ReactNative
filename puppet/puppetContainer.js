@@ -4,6 +4,7 @@ class ReactPuppetClient {
     
     static connect(instance) {
 
+        /* on the server side, I made it return session ID as a response when it sees `Accept': 'text/html`, to use it here */
         fetch('http://192.168.1.170:8080/HelloWorld', { headers: { 'Accept': 'text/html' } }).then(function (res) {
 
             if (res.ok) {
