@@ -1122,7 +1122,7 @@ exports["Puppet"] =
 	                generate(observer);
 	            };
 	            if (!observer.usePolling) {
-	                observer.bump = function () { generate(observer); };
+	                observer.touch = function () { generate(observer); };
 	            }
 	            var fastCheck = function () {
 	                clearTimeout(observer.next);
@@ -1662,11 +1662,12 @@ exports["Puppet"] =
 	        }
 	        this.remoteUrlSet = true;
 	        this.remoteUrl = new URL_1.default(remoteUrl, this.remoteUrl.href);
+			this.wsURL = this.calculateWSUrl(this.remoteUrl.href);
 	    };
 	    ;
 	    // TODO:(tomalec)[cleanup] hide from public API.
 	    PuppetNetworkChannel.prototype.handleResponseHeader = function (res) {
-	        var location = res.headers['X-Location'] || res.headers['Location'];
+	        var location = res.headers['X-Location'] || res.headers['Location'] || res.headers['x-location'] || res.headers['location'];
 	        if (location) {
 	            this.setRemoteUrl(location);
 	        }
@@ -1695,7 +1696,7 @@ exports["Puppet"] =
 	            callback && callback.call(this.puppet, res, method);
 	        }.bind(this);
 	        var failureHandler = function (res) {
-				console.log('omar', res);
+				console.log(res)
 	            res = res.response;
 	            this.onFatalError({ statusCode: res.status, statusText: res.statusText, reason: JSON.stringify(res.data) }, url, method);
 	        }.bind(this);
@@ -5323,7 +5324,6 @@ exports["Puppet"] =
 	    JSONPatchQueue.prototype.receive = function (obj, versionedJsonPatch, applyCallback) {
 	        var apply = applyCallback || this.apply;
 	        var consecutivePatch = versionedJsonPatch.slice(0);
-	        console.log('consecutivePatch', consecutivePatch);
 	        // strip Versioned JSON Patch specifiy operation objects from given sequence
 	        if (this.purist) {
 	            var testRemote = consecutivePatch.shift();
