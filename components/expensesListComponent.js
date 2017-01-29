@@ -4,7 +4,7 @@ import { styles } from './styles';
 import {
     StyleSheet,
     Text,
-    TextInput, 
+    TextInput,
     ListView,
     Button,
     View
@@ -19,8 +19,8 @@ class ExpensesListComponent extends Component {
     }
     componentWillUpdate(nextProps) {
         console.log('componentWillUpdate', nextProps.expenses)
-       this.listDataSource =  this.listDataSource.cloneWithRows(nextProps.expenses || [])
-    }   
+        this.listDataSource = this.listDataSource.cloneWithRows(nextProps.expenses || [])
+    }
     render() {
 
         return <View style={styles.container}>
@@ -48,8 +48,8 @@ class ExpensesListComponent extends Component {
                 enableEmptySections={true}
                 renderRow={(rowData, sectionId, rowID) =>
                     <View style={styles.inlinedChildren}>
-                        <TextInput onChangeText={(text) => { this.props.onUpdateExpense(rowID, 'Description$', text) }} placeholder="Description" style={{ width: 150 }}>{rowData.HelloWorld.Description$}</TextInput>
-                        <TextInput onChangeText={ (text) => { this.props.onUpdateExpense(rowID, 'Amount$', text) }} style={{ width: 50 }} value={rowData.HelloWorld.Amount$ + ""}></TextInput>
+                        <TextInput onChangeText={(text) => { this.props.onUpdateExpense(rowID, 'Description$', text) } } placeholder="Description" style={{ width: 150 }}>{rowData.HelloWorld.Description$}</TextInput>
+                        <TextInput onChangeText={(text) => { this.props.onUpdateExpense(rowID, 'Amount$', text) } } style={{ width: 50 }} value={rowData.HelloWorld.Amount$ + ""}></TextInput>
                     </View>
                 }
                 />

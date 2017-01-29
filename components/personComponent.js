@@ -11,8 +11,8 @@ import {
 
 class PersonComponent extends Component {
     render() {
-        
-        return <View style={styles.container}>            
+
+        return <View style={styles.container}>
             <TextInput
                 style={{ height: 40, width: 300 }}
                 onChangeText={(text) => his.props.onUpdate({ FirstName$: text })}
@@ -34,14 +34,14 @@ class PersonComponent extends Component {
                 </View>
                 <View style={{ margin: 3 }}>
                     <Button
-                        onPress={() => { this.props.onSave() }}
+                        onPress={() => { this.props.onSave() } }
                         title="Cancel"
                         style={styles.button}
                         accessibilityLabel="Click to cancel"
                         />
                 </View>
             </View>
-        </View>        
+        </View>
     }
 }
 export default PersonComponent;

@@ -25,9 +25,8 @@ export default class RNHelloWorld extends Component {
   updateHappened(e) {
     this.setState({ ...this.puppetObj });
   }
-  onConnect()
-  {
-    this.setState({connected: true})
+  onConnect() {
+    this.setState({ connected: true })
   }
   componentDidMount() {
     ReactPuppetClient.connect(this, this.onConnect.bind(this));
