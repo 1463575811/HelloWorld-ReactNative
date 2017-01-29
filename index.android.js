@@ -13,8 +13,6 @@ import { styles } from './components/styles';
 import {
   AppRegistry,
   Text,
-  TextInput,
-  Button,
   View
 } from 'react-native';
 
