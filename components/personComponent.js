@@ -34,7 +34,7 @@ class PersonComponent extends Component {
                 </View>
                 <View style={{ margin: 3 }}>
                     <Button
-                        onPress={() => { this.props.onSave() } }
+                        onPress={this.props.onCancelClick}
                         title="Cancel"
                         style={styles.button}
                         accessibilityLabel="Click to cancel"
