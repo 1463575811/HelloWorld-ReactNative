@@ -15,7 +15,7 @@ class PersonComponent extends Component {
         return <View style={styles.container}>
             <TextInput
                 style={{ height: 40, width: 300 }}
-                onChangeText={(text) => his.props.onUpdate({ FirstName$: text })}
+                onChangeText={(text) => this.props.onUpdate({ FirstName$: text })}
                 value={this.props.firstName}
                 />
             <TextInput
