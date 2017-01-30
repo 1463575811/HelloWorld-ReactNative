@@ -46,6 +46,8 @@ This app has PuppetJS and JSONPatch embedded inside for ease of setup and use. S
 
 #### Note 3:
 To save you some time, the files that are mostly interesting for you are:
-`\index.android.js`
-`\puppet\puppetContainer.js`
-`\components` directory.
+```
+\index.android.js
+\puppet\puppetContainer.js
+\components directory.
+```
