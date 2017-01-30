@@ -1696,7 +1696,6 @@ exports["Puppet"] =
 	            callback && callback.call(this.puppet, res, method);
 	        }.bind(this);
 	        var failureHandler = function (res) {
-				console.log(res)
 	            res = res.response;
 	            this.onFatalError({ statusCode: res.status, statusText: res.statusText, reason: JSON.stringify(res.data) }, url, method);
 	        }.bind(this);
