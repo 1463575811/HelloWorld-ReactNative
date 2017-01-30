@@ -13,11 +13,11 @@ These instructions assume:
 git clone https://github.com/StarcounterSamples/ReactNative-HelloWorld.git
 cd ReactNative-HelloWorld
 ```
-Then you need to `npm install` it, to download all the Node modules your app needs:
+#### 2. Then you need to `npm install` it, to download all the Node modules your app needs:
 ```
 ReactNative-HelloWorld> npm install
 ```
-Now,  you need to make sure you have an AVD (Android Virtual Device) running and accessible via the ADB. To test that, type:
+#### 3. Now,  you need to make sure you have an AVD (Android Virtual Device) running and accessible via the ADB. To test that, type:
 ```
 adb shell
 ```
@@ -25,7 +25,7 @@ in your command line, and you should have access to the CLI of your Android mach
 
 Now, you need to navigate to `ReactNative-HelloWorld\puppet\puppetContainer.js` and change the IP Address to `localhost` if you have Starcounter running on the same machine. Or to any IP address SC is running on. Save after the modification.
 
-Now in your CLI, that has the current directory set to `ReactNative-HelloWorld`, type:
+#### 4. Now in your CLI, that has the current directory set to `ReactNative-HelloWorld`, type:
 ```
 react-native run-android
 ```
