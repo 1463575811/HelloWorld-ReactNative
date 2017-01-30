@@ -29,7 +29,7 @@ Now in your CLI, that has the current directory set to `ReactNative-HelloWorld`,
 ```
 react-native run-android
 ```
-It will take up to 5 minutes, and the app will start, and to connect to you SC instance and it will show the data in the DB!
+It will take up to 5 minutes, and the app will start and connect to you SC instance and it will show the data in the DB!
 
 ### Notes
 You might run in some trouble when running the app, please navigate to `ReactNative-HelloWorld\android\gradle.properties`
