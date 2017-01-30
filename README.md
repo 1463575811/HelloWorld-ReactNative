@@ -32,9 +32,20 @@ react-native run-android
 It will take up to 5 minutes, and the app will start and connect to you SC instance and it will show the data in the DB!
 
 ### Notes
+#### Note 1:
+
 You might run in some trouble when running the app, please navigate to `ReactNative-HelloWorld\android\gradle.properties`
 And make sure the line
 ```
 org.gradle.java.home=C:\\Program Files\\Java\\jdk1.8.0_121
 ```
 Points to the right JDK location.
+
+#### Note 2:
+This app has PuppetJS and JSONPatch embedded inside for ease of setup and use. Soon these two should be separate Node modules referenced in this app.
+
+#### Note 3:
+To save you some time, the files that are mostly interesting for you are:
+`\index.android.js`
+`\puppet\puppetContainer.js`
+`\components` directory.
