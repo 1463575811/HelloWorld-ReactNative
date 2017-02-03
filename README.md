@@ -23,7 +23,7 @@ adb shell
 ```
 in your command line, and you should have access to the CLI of your Android machine. If you succeed, you can type `exit` to leave the shell.
 
-Now, you need to navigate to `ReactNative-HelloWorld\puppet\puppetContainer.js` and change the IP Address to `localhost` if you have Starcounter running on the same machine. Or to any IP address SC is running on. Save after the modification.
+Now, you need to navigate to `ReactNative-HelloWorld\puppet\puppetContainer.js` and change the IP Address to your machine's IP address, *keep in mind, that you can't use `localhost` because it refers to the Android machine itself*, Save after the modification.
 
 #### 4. Now in your CLI, that has the current directory set to `ReactNative-HelloWorld`, type:
 ```

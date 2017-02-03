@@ -6,7 +6,7 @@ class ReactPuppetClient {
         var defaultLocalVersionPath = "/_ver#c$";
         var defaultRemoteVersionPath = "/_ver#s";
         instance.puppet = new Puppet({
-            remoteUrl: "http://192.168.1.170:8080/HelloWorld", ot: true, localVersionPath: defaultLocalVersionPath,
+            remoteUrl: "http://192.168.2.10:8080/HelloWorld", ot: true, localVersionPath: defaultLocalVersionPath,
             remoteVersionPath: defaultRemoteVersionPath, useWebSocket: true, usePolling: false, callback: function (obj) {
                 instance.puppetObj = obj;
                 instance.updateHappened.call(instance);

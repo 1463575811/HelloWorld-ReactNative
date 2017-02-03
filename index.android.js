@@ -55,7 +55,7 @@ export default class RNHelloWorld extends Component {
     if (!this.state.connected) {
       return <View style={styles.container}>
         <Text style={styles.welcome}>
-          Connecting...
+          Connecting to SC...
           </Text>
       </View>
     }
