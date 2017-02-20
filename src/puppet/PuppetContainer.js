@@ -1,6 +1,13 @@
 import { Puppet } from "./puppet";
 import { resetState } from "../actions";
 
+/* 
+  this code is all you need to connect PuppetJS with your Redux app,
+  no matter how much your app grows, you don't really need to change this code much,
+  unless you want to add some `disconnected/reconnecting..` messages or so. 
+  The point being is that this scales infinitely.
+*/
+
 const PuppetContainer = (store, onConnected) => {
   var defaultLocalVersionPath = "/_ver#c$";
   var defaultRemoteVersionPath = "/_ver#s";

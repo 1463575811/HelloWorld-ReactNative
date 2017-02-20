@@ -1,5 +1,7 @@
 # ReactNative HelloWorld with Starcounter and PuppetJS
 
+#### Good read before starting: If you're confused about `components` and `containers` folders, please refer to [Dan Abramov's explanation](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.492it94gu).
+
 #### Expected needed time: 30 mins 
 (download time not included ~1.5GB for Android Studio)
 
