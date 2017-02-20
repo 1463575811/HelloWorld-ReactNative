@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 import PersonComponent from '../components/Person';
-import { changeFirstName, changLastName } from '../actions'
+import { changeFirstName, changeLastName } from '../actions'
 
 const mapStateToProps = (state) => {
     return {
         firstName: state.FirstName$,
         lastName: state.LastName$,
-        fullName: state.Fullname
+        fullName: state.FullName
     }
 }
 const mapDispatchToProps = (dispatch) => {

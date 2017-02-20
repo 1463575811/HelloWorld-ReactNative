@@ -6,16 +6,18 @@ import {
     View
 } from 'react-native';
 
-const Expense = ({ Description$, Amount$ }) => (
+const Expense = ({ Description$, Amount$, index, onChangeDescription, onChangeAmount }) => (
     <View style={styles.inlinedChildren} >
-        <TextInput style={{width: 200}} value={Description$} />
-        <TextInput style={{width: 200}} value={Amount$.toString()} />
+        <TextInput style={{ width: 200 }} onChangeText={(text) => onChangeDescription(text, index)} value={Description$} />
+        <TextInput style={{ width: 60 }} onChangeText={(text) => onChangeAmount(text, index)} value={Amount$.toString()} />
     </View>
 )
 
 Expense.propTypes = {
-    Description$: PropTypes.string.isRequired,
+    Description$: PropTypes.string,
     Amount$: PropTypes.number.isRequired,
+    onChangeDescription: PropTypes.func.isRequired,
+    onChangeAmount: PropTypes.func.isRequired
 }
 
 export default Expense

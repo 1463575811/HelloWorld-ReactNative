@@ -4,20 +4,25 @@ import styles from '../styles/style';
 
 import {
     TextInput,
+    Text,
     View,
     Button
 } from 'react-native';
 
-const Person = ({ firstName, lastName }) => (
-    <View>
-      <TextInput style={{width: 200}}>{firstName}</TextInput>
-      <TextInput style={{width: 200}}>{lastName}</TextInput>
+const Person = ({ firstName, lastName, fullName, onFirstNameChange, onLastNameChange }) => (
+    <View style={{margin: 10}}>
+        <Text style={{marginTop: 10, fontSize: 15}}>{fullName}</Text>
+        <TextInput style={{ width: 240 }} onChangeText={onFirstNameChange}>{firstName}</TextInput>
+        <TextInput style={{ width: 240 }} onChangeText={onLastNameChange}>{lastName}</TextInput>
     </View>
 )
 
 Person.propTypes = {
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
+    fullName: PropTypes.string.isRequired,
+    onFirstNameChange: PropTypes.func.isRequired,
+    onLastNameChange: PropTypes.func.isRequired
 }
 
 export default Person

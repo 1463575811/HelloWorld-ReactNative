@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PersonComponent from '../components/Person';
-import { save, cancel, deleteAllExpenses } from '../actions'
+import { addExpense, save, cancel, deleteAllExpenses } from '../actions'
 import ControlsComponent from '../components/Controls';
 
 const mapDispatchToProps = (dispatch) => {
@@ -9,10 +9,13 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(save())
         },
         onCancel: () => {
-            dispatch(cancel(name))
+            dispatch(cancel())
         },
         onDeleteAll: () => {
             dispatch(deleteAllExpenses())
+        },
+        onAddNew: () => {
+            dispatch(addExpense())
         }
     }
 }

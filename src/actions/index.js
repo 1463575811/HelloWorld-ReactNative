@@ -1,7 +1,6 @@
-export const addExpense = (expense) => {
+export const addExpense = () => {
     return {
-        type: 'ADD_EXPENSE',
-        expense
+        type: 'ADD_EXPENSE'
     }
 }
 export const changeFirstName = (name) => {
@@ -14,6 +13,20 @@ export const changeLastName = (name) => {
     return {
         type: 'CHANGE_LAST_NAME',
         name
+    }
+}
+export const changeExpenseDescription = (desc, index) => {
+    return {
+        type: 'CHANGE_EXPENSE_DESC',
+        desc, 
+        index
+    }
+}
+export const changeExpenseAmount = (amount, index) => {
+    return {
+        type: 'CHANGE_EXPENSE_AMOUNT',
+        amount, 
+        index
     }
 }
 export const resetState = (state) => {

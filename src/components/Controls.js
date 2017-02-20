@@ -6,18 +6,28 @@ import {
     Button
 } from 'react-native';
 
-const Controls = ({ onSave, onCancel, onDeleteAll }) => (
+const Controls = ({ onSave, onCancel, onDeleteAll, onAddNew }) => (
     <View style={styles.inlinedChildren}>
-        <Button title="Save" onPress={onSave} />
-        <Button title="Cancel" onPress={onCancel} />
-        <Button title="Delete All" onPress={onDeleteAll} />
+        <View style={{ margin: 2 }} >
+            <Button title="Save" onPress={onSave} />
+        </View>
+        <View style={{ margin: 2 }} >
+            <Button title="Cancel" onPress={onCancel} />
+        </View>
+        <View style={{ margin: 2 }} >
+            <Button title="Delete All" onPress={onDeleteAll} />
+        </View>
+        <View style={{ margin: 2 }} >
+            <Button title="Add" onPress={onAddNew} />
+        </View>
     </View>
 )
 
 Controls.propTypes = {
     onSave: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
-    onDeleteAll: PropTypes.func.isRequired
+    onDeleteAll: PropTypes.func.isRequired,
+    onAddNew: PropTypes.func.isRequired
 }
 
 export default Controls;

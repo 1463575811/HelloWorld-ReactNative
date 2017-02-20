@@ -6,21 +6,23 @@ import {
     View
 } from 'react-native';
 
-const ExpensesList = (expenses) => {
-    let returnVal = [];
-    expenses.forEach((exp, index) => {
-        returnVal.push(<Expense key={index} {...exp.HelloWorld} />);
-    });
-    return returnVal;
-}
-const ExpenseList = ({ Expenses }) => (
+const ExpenseList = ({ Expenses, onExpenseDescriptionChange, onExpenseAmountChange}) => (
     <View>
-        { ExpensesList(Expenses) }
+        {Expenses.map(function (exp, index) {
+           return (<Expense
+                key={index}
+                {...exp.HelloWorld}
+                index={index}
+                onChangeDescription={onExpenseDescriptionChange}
+                onChangeAmount={onExpenseAmountChange} />)
+        })}
     </View>
 )
 
 ExpenseList.propTypes = {
-    Expenses: PropTypes.array.isRequired
+    Expenses: PropTypes.array.isRequired,
+    onExpenseDescriptionChange: PropTypes.func.isRequired,
+    onExpenseAmountChange: PropTypes.func.isRequired,
 }
 
 export default ExpenseList

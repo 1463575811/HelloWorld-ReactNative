@@ -1,21 +1,16 @@
 import { StyleSheet } from 'react-native';
 
 export default styles = StyleSheet.create({
-    container: {
+    alignedContainer: {
         flex: 1,
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
+        justifyContent:'center'
     },
     button: {
         color: '#ff5858'
     },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
     inlinedChildren: {
-        flexWrap: 'wrap',
         alignItems: 'flex-start',
         flexDirection: 'row',
         padding: 5

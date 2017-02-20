@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PersonComponent from '../components/Person';
-import { save, cancel, deleteAllExpenses } from '../actions'
+import { changeExpenseDescription, changeExpenseAmount } from '../actions'
 import ExpenseListComponent from '../components/ExpenseList';
 
 const mapStateToProps = (state) => {
@@ -9,6 +9,17 @@ const mapStateToProps = (state) => {
     }
 }
 
-const ExpenseList = connect(mapStateToProps, null)(ExpenseListComponent);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onExpenseDescriptionChange: (desc, index) => {
+            dispatch(changeExpenseDescription(desc, index))
+        },
+        onExpenseAmountChange: (amount, index) => {
+             dispatch(changeExpenseAmount(amount, index))
+        }
+    }
+}
+
+const ExpenseList = connect(mapStateToProps, mapDispatchToProps)(ExpenseListComponent);
 
 export default ExpenseList;
